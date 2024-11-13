@@ -2,7 +2,7 @@ const generatePasswordBtn = document.querySelector('.input-button');
 const outputText = document.querySelector('.output-text');
 const sybmolsPassword = '!@#$%^&*()_+?><}|{~';
 const string = 'qwertyuiopasdfghjklzxcvbnm';
-let timesString = 8;
+let timesString = 16;
 let intervalRepeat = 0;
 let intervalStop;
 let passwordSaver;
@@ -10,7 +10,7 @@ let passwordSaver;
 function generatePassword() {
     intervalStop = setInterval(() => {
         let mixing = Math.floor(Math.random() * 4);
-        if (intervalRepeat < 12) {
+        if (intervalRepeat < timesString) {
             intervalRepeat++;
 
             if (mixing === 0) {
