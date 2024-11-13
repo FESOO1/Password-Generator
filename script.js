@@ -29,7 +29,7 @@ function generatePassword() {
             intervalRepeat = 0;
             clearInterval(intervalStop);
         };
-    }, 10);
+    }, 5);
 };
 
 generatePasswordBtn.addEventListener('click', () => {
