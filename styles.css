@@ -265,6 +265,18 @@ body {
     cursor: pointer;
 }
 
+.copied-password-itself-button-copied {
+    background-color: rgb(40,40,40);
+}
+
+.copied-password-itself-button-copied > .copied-password-itself-button-svg {
+    display: none;
+}
+
+.copied-password-itself-button-copied > .copied-password-itself-button-svg-copied {
+    display: unset;
+}
+
 .copied-password-itself-button-svg,
 .copied-password-itself-button-svg-copied {
     fill: white;
