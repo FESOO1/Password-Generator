@@ -5,10 +5,14 @@ const string = 'qwertyuiopasdfghjklzxcvbnm';
 const copyButton = document.querySelector('.copy-button');
 const popUpMessage = document.querySelector('.pop-up-message');
 const popUpMessageItself = document.querySelector('.pop-up-message-itself');
+const copiedPasswordsContainer = document.querySelector('.all-the-copied-passwords-container');
+const copiedPasswordsContainerBtn = document.querySelector('.all-the-copied-passwords-container-top-button');
 let timesString = 16;
 let intervalRepeat = 0;
 let intervalStop;
 let passwordSaver;
+
+// GENERATE PASSWORD
 
 function generatePassword() {
     intervalStop = setInterval(() => {
@@ -51,4 +55,11 @@ copyButton.addEventListener('click', () => {
         copyButton.disabled = false;
         popUpMessage.style.bottom = '-50px';
     }, 3000);
+});
+
+
+// COPIED PASSWORDS
+
+copiedPasswordsContainerBtn.addEventListener('click', () => {
+    copiedPasswordsContainer.classList.toggle('copied-passwords-container-js');
 });

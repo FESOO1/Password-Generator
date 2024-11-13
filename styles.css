@@ -159,6 +159,15 @@ body {
     display: grid;
     grid-template-rows: auto 1fr;
     overflow: hidden;
+    transition: bottom 300ms;
+}
+
+.copied-passwords-container-js {
+    bottom: -360px;
+}
+
+.copied-passwords-container-js .all-the-copied-passwords-container-top-button-svg {
+    transform: rotateZ(180deg);
 }
 
 /* COPIED PASSWORDS CONTAINER TOP */
@@ -198,6 +207,7 @@ body {
 
 .all-the-copied-passwords-container-top-text {
     text-align: center;
+    color: white;
 }
 
 /* COPIED PASSWORDS CONTAINER BOTTOM */
