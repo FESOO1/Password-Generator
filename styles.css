@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --f-all: "Poppins", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--f-all);
+}
+
+body {
+    background-color: rgb(16,16,16);
+}
+
+/* CONTAINER */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+/* OUTPUT */
+
+.output {
+    min-width: 250px;
+    height: 50px;
+    background-color: rgb(22,22,22);
+    border-radius: 0.2rem;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* INPUT BUTTON */
+
+.input-button {
+    font-size: 1rem;
+    padding: 5px 15px;
+    border-radius: 2rem;
+    border: 0;
+    background-color: rgb(18,18,18);
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.01);
+    cursor: pointer;
+    box-shadow: 0 3px 0 black;
+}
+
+.input-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 black;
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+}
