@@ -1,5 +1,5 @@
 const generatePasswordBtn = document.querySelector('.input-button');
-const output = document.querySelector('.output');
+const outputText = document.querySelector('.output-text');
 const sybmolsPassword = '!@#$%^&*()_+?><}|{~';
 const string = 'qwertyuiopasdfghjklzxcvbnm';
 let timesString = 8;
@@ -23,7 +23,7 @@ function generatePassword() {
                 passwordSaver = sybmolsPassword[Math.floor(Math.random() * sybmolsPassword.length)];
             }
 
-            output.textContent += passwordSaver;
+            outputText.textContent += passwordSaver;
         } else {
             intervalRepeat = 0;
             clearInterval(intervalStop);
@@ -32,6 +32,6 @@ function generatePassword() {
 };
 
 generatePasswordBtn.addEventListener('click', () => {
-    output.textContent = '';
+    outputText.textContent = '';
     generatePassword();
 });
