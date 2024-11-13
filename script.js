@@ -2,6 +2,7 @@ const generatePasswordBtn = document.querySelector('.input-button');
 const outputText = document.querySelector('.output-text');
 const sybmolsPassword = '!@#$%^&*()_+?><}|{~';
 const string = 'qwertyuiopasdfghjklzxcvbnm';
+const copyButton = document.querySelector('.copy-button');
 let timesString = 16;
 let intervalRepeat = 0;
 let intervalStop;
@@ -34,4 +35,16 @@ function generatePassword() {
 generatePasswordBtn.addEventListener('click', () => {
     outputText.textContent = '';
     generatePassword();
+});
+
+// COPY BUTTON
+
+copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(outputText.textContent);
+    copyButton.classList.add('copy-button-copied');
+    copyButton.disabled = true;
+    setTimeout(() => {
+        copyButton.classList.remove('copy-button-copied');
+        copyButton.disabled = false;
+    }, 3000);
 });

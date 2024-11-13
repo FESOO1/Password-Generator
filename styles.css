@@ -79,6 +79,22 @@ body {
     background-color: rgb(35,35,35);
 }
 
+.copy-button-copied {
+    background-color: rgb(40,40,40);
+}
+
+.copy-button-copied:disabled {
+    pointer-events: none;
+}
+
+.copy-button-copied .copy-button-svg {
+    display: none;
+}
+
+.copy-button-copied .copy-button-svg-copied {
+    display: unset;
+}
+
 /* INPUT BUTTON */
 
 .input-button {
