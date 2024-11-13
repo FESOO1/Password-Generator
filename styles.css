@@ -36,12 +36,6 @@ body {
     color: rgb(255, 89, 0);
     width: 20px;
     height: 20px;
-    animation: 10s infinite pop-message-svg-animation;
-}
-
-@keyframes pop-message-svg-animation {
-    to{transform: rotateZ(360deg);}
-    to{transform: rotateZ(360deg);}
 }
 
 .pop-up-message-itself {
