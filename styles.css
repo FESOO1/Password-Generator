@@ -150,7 +150,7 @@ body {
 
 .all-the-copied-passwords-container {
     position: fixed;
-    bottom: 0;
+    bottom: -360px;
     right: 10px;
     width: 280px;
     height: 400px;
@@ -164,7 +164,7 @@ body {
 }
 
 .copied-passwords-container-js {
-    bottom: -360px;
+    bottom: 0px;
 }
 
 .copied-passwords-container-js .all-the-copied-passwords-container-top-button-svg {
