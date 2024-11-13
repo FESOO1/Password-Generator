@@ -3,6 +3,8 @@ const outputText = document.querySelector('.output-text');
 const sybmolsPassword = '!@#$%^&*()_+?><}|{~';
 const string = 'qwertyuiopasdfghjklzxcvbnm';
 const copyButton = document.querySelector('.copy-button');
+const popUpMessage = document.querySelector('.pop-up-message');
+const popUpMessageItself = document.querySelector('.pop-up-message-itself');
 let timesString = 16;
 let intervalRepeat = 0;
 let intervalStop;
@@ -43,8 +45,10 @@ copyButton.addEventListener('click', () => {
     navigator.clipboard.writeText(outputText.textContent);
     copyButton.classList.add('copy-button-copied');
     copyButton.disabled = true;
+    popUpMessage.style.bottom = '10px';
     setTimeout(() => {
         copyButton.classList.remove('copy-button-copied');
         copyButton.disabled = false;
+        popUpMessage.style.bottom = '-50px';
     }, 3000);
 });

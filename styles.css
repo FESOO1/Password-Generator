@@ -20,10 +20,10 @@ body {
 .pop-up-message {
     position: fixed;
     bottom: 10px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(32,32,32);
-    /* background: linear-gradient(45deg, rgb(50,50,50), rgb(32,32,32),rgb(32,32,32)); */
     display: flex;
     align-items: center;
     column-gap: 8px;
@@ -31,12 +31,8 @@ body {
     border-radius: 5rem;
     border-top: 1px solid rgba(255,255,255,0.05);
     border-bottom: 1px solid rgba(255,255,255,0.01);
-    /* animation: 500ms infinite animation-pop-up-message; */
+    transition: bottom 300ms;
 }
-
-/* @keyframes animation-pop-up-message {
-    to{background: linear-gradient(45deg,rgb(32,32,32),rgb(32,32,32),rgb(50,50,50));}
-} */
 
 .pop-up-message-svg {
     color: rgb(255, 255, 255);
