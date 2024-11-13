@@ -1,6 +1,6 @@
 const generatePasswordBtn = document.querySelector('.input-button');
 const outputText = document.querySelector('.output-text');
-const sybmolsPassword = '!@#$%^&*()_+?><}|{~.,';
+const sybmolsPassword = '!@#$%^&*()_+?}|{~.,';
 const string = 'qwertyuiopasdfghjklzxcvbnm';
 const copyButton = document.querySelector('.copy-button');
 const popUpMessage = document.querySelector('.pop-up-message');

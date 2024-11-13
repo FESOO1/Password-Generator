@@ -152,7 +152,7 @@ body {
     position: fixed;
     bottom: 0;
     right: 10px;
-    width: 300px;
+    width: 280px;
     height: 400px;
     border: 1px solid rgba(255,255,255,0.05);
     border-radius: 0.5rem 0.5rem 0 0;
@@ -215,4 +215,59 @@ body {
 
 .all-the-copied-passwords-container-bottom {
     background-color: rgb(18,18,18);
+    overflow: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.copied-password-itself {
+    background-color: rgb(24, 24, 24);
+    padding: 5px 15px;
+    padding-inline: 15px 8px;
+    border-radius: 0.1rem;
+    border: 1px solid rgba(255,255,255,0.04);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    column-gap: 8px;
+}
+
+.copied-password-itself-text {
+    color: white;
+    font-weight: 400;
+}
+
+.copied-password-itself-divider {
+    border: 0;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.copied-password-itself-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background-color: rgb(30,30,30);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.copied-password-itself-button-svg,
+.copied-password-itself-button-svg-copied {
+    fill: white;
+    width: 18px;
+    height: 18px;
+}
+
+.copied-password-itself-button-svg-copied {
+    display: none;
+}
+
+.copied-password-itself-button:hover {
+    background-color: rgb(35,35,35);
 }
