@@ -233,6 +233,8 @@ body {
     padding: 5px;
     display: flex;
     flex-direction: column;
+    /* flex-direction: column-reverse;
+    justify-content: flex-end; */
     row-gap: 5px;
 }
 
@@ -290,6 +292,11 @@ body {
 .copied-password-itself-button-copied > .copied-password-itself-button-svg-copied {
     display: unset;
 }
+
+/* .copied-password-itself-button-copied:disabled {
+    pointer-events: none;
+    background-color: red;
+} */
 
 .copied-password-itself-button-svg,
 .copied-password-itself-button-svg-copied {

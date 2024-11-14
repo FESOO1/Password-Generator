@@ -84,8 +84,10 @@ copyButton.addEventListener('click', () => {
         copiedPasswordItselfButton.addEventListener('click', () => {
             navigator.clipboard.writeText(copiedPasswordItselfText.textContent);
             copiedPasswordItselfButton.classList.add('copied-password-itself-button-copied');
+            copiedPasswordItselfButton.disabled = true;
             setTimeout(() => {
                 copiedPasswordItselfButton.classList.remove('copied-password-itself-button-copied');
+                copiedPasswordItselfButton.disabled = false;
             }, 3000);
         });
 
@@ -115,7 +117,7 @@ function displayCopiedPasswordsThatAreSavedInTheLocalStorage() {
     const storedCopiedPasswords = JSON.parse(localStorage.getItem('copiedPasswordsStorage'));
 
     if (storedCopiedPasswords.length > 0) {
-        for (let i = 0; i < storedCopiedPasswords; i++) {
+        for (let i = 0; i < storedCopiedPasswords.length; i++) {
             const copiedPasswordItself = document.createElement('div');
             copiedPasswordItself.classList.add('copied-password-itself');
             const copiedPasswordItselfText = document.createElement('h3');
@@ -133,19 +135,22 @@ function displayCopiedPasswordsThatAreSavedInTheLocalStorage() {
             copiedPasswordItself.appendChild(copiedPasswordItselfButton);
 
             copiedPasswordItselfText.textContent = storedCopiedPasswords[i];
+
             copiedPasswordsThemselves.appendChild(copiedPasswordItself);
 
             // COPY BUTTON
-            /* copiedPasswordItselfButton.addEventListener('click', () => {
+            copiedPasswordItselfButton.addEventListener('click', () => {
                 navigator.clipboard.writeText(copiedPasswordItselfText.textContent);
                 copiedPasswordItselfButton.classList.add('copied-password-itself-button-copied');
+                copiedPasswordItselfButton.disabled = true;
                 setTimeout(() => {
                     copiedPasswordItselfButton.classList.remove('copied-password-itself-button-copied');
+                    copiedPasswordItselfButton.disabled = false;
                 }, 3000);
             });
             // LOCAL STORAGE
             copiedPasswords.push(storedCopiedPasswords[i]);
-            localStorage.setItem('copiedPasswords', JSON.stringify(copiedPasswords)); */
+            localStorage.setItem('copiedPasswords', JSON.stringify(copiedPasswords));
         };
     };
 }
