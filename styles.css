@@ -19,8 +19,7 @@ body {
 
 .pop-up-message {
     position: fixed;
-    bottom: 10px;
-    bottom: -50px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(32,32,32);
@@ -31,7 +30,7 @@ body {
     border-radius: 5rem;
     border-top: 1px solid rgba(255,255,255,0.05);
     border-bottom: 1px solid rgba(255,255,255,0.01);
-    transition: bottom 300ms;
+    transition: top 300ms;
 }
 
 .pop-up-message-svg {
@@ -70,10 +69,25 @@ body {
     align-items: center;
     padding-inline: 20px 6.5px;
     column-gap: 6.5px;
-    color: white;
-    font-size: 1.5rem;
     font-weight: 400;
     box-shadow: 0 4px 0 black;
+}
+
+.output-error {
+    animation: 200ms output-error-animation;
+}
+
+@keyframes output-error-animation {
+    0%{transform: translateX(0);}
+    25%{transform: translateX(-5px);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(5px);}
+    100%{transform: translateX(0);}
+}
+
+.output-text {
+    font-size: 1.5rem;
+    color: white;
 }
 
 .output-divider {
@@ -290,4 +304,24 @@ body {
 
 .copied-password-itself-button:hover {
     background-color: rgb(35,35,35);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 450px) {
+    .all-the-copied-passwords-container {
+        width: 95%;
+    }
+    .output {
+        min-width: 95%;
+    }
+}
+
+@media (max-width: 340px) {
+    .output-text {
+        font-size: 1.2rem;
+    }
+    .all-the-copied-passwords-container-top-text {
+        font-size: 0.9rem;
+    }
 }
